@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #020617; /* Slate 950 */
+    color: #e2e8f0; /* Slate 200 */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+
+  /* Sleek Minimal Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #020617;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+  }
+}
+
+/* Sleek Interface Design Elements */
+.sleek-card {
+  background: rgba(15, 23, 42, 0.5); /* bg-slate-900/50 */
+  border: 1px solid #1e293b; /* border-slate-800 */
+  border-radius: 1.5rem; /* rounded-3xl */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.sleek-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.sleek-card-featured {
+  background: #2563eb; /* bg-blue-600 */
+  border-radius: 1.5rem; /* rounded-3xl */
+  color: #ffffff;
+}
+
+.sleek-badge {
+  background-color: #1e293b; /* bg-slate-800 */
+  border: 1px solid #334155; /* border-slate-700 */
+  border-radius: 0.375rem; /* rounded */
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 6s infinite ease-in-out;
+}
